@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_22_193817) do
+ActiveRecord::Schema.define(version: 2021_02_22_194810) do
 
   create_table "films", force: :cascade do |t|
     t.string "title"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 2021_02_22_193817) do
     t.text "homeworld"
     t.text "films"
     t.text "species"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.string "diameter"
+    t.string "rotation_period"
+    t.string "orbital_period"
+    t.string "gravity"
+    t.string "population"
+    t.text "residents"
+    t.text "films"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
