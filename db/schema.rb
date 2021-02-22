@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_22_194810) do
+ActiveRecord::Schema.define(version: 2021_02_22_195411) do
 
   create_table "films", force: :cascade do |t|
     t.string "title"
@@ -44,6 +44,20 @@ ActiveRecord::Schema.define(version: 2021_02_22_194810) do
     t.string "gravity"
     t.string "population"
     t.text "residents"
+    t.text "films"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.string "classification"
+    t.string "average_height"
+    t.string "average_lifespan"
+    t.string "skin_colors"
+    t.string "language"
+    t.text "homeworld"
+    t.text "people"
     t.text "films"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
